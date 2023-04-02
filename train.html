@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script defer src="js/train.js" type="module"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ML5 Neural Network Regression</title>
+  </head>
+
+  <body>
+    <div class="values">
+    <div><h2>ML5 Neural Network Regression</h2></div>
+    <h3>Predict the price of a phone based on the followong specs:</h3>
+    <strong><label for="memory-input-field">Memory</label></strong>
+    <br />
+    <input type="text" id="memory-input-field" placeholder="Memory/RAM" />
+    <br />
+    <br />
+    <strong><label for="resoloution-input-field">Resoloution</label></strong>
+    <br />
+    <input type="text" id="resoloution-input-field" placeholder="Resoloution" />
+    <br />
+    <br />
+    <strong><label for="battery-input-field">Battery</label></strong>
+    <br />
+    <input type="text" id="battery-input-field" placeholder="Battery capacity" />
+    <br />
+    <br />
+    <strong><label for="cores-input-field">Cores</label></strong>
+    <br />
+    <input type="text" id="cores-input-field" placeholder="Cores" />
+    <br />
+    <br />
+    <button id="prediction-btn">Predict</button>
+    <br />
+    <br />
+    <button id="save-btn">Download model</button>
+    </div>
+    <div id="result"></div>
+    <canvas id="myChart" width="300" height="200"></canvas>
+  </body>
+</html>
