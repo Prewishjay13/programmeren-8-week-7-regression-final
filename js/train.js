@@ -58,7 +58,6 @@ function loadData() {
 /**
  * Creating a Neural Network
  */
-  // Shuffle: Prevents that the Neural Network learns the exact order of CSV data
 function createNeuralNetwork(data) {
   data.sort(() => Math.random() - 0.5);
   // Slice data into test and training data
@@ -83,7 +82,7 @@ function createNeuralNetwork(data) {
     nn.addData(inputs, { price: mobilePhone.price });
   }
 
-  // Normalize: Prevents that some columns have higher precedence than others
+  // Normalize
   nn.normalizeData();
 
   //Pass data to next function
@@ -96,11 +95,7 @@ function createNeuralNetwork(data) {
 function checkData(trainData, testData) {
   console.table(testData);
 
-  /**
-   * Scatterplot = A type of mathematical diagram using Cartesian coordinates
-   * to display values for typically two variables for a set of data
-   * The scatterplot only consists of x and y, it's not like Neural Network
-   */
+
 
   // Prepare the data for the scatterplot
   const chartdata = trainData.map((mobilePhone) => ({
