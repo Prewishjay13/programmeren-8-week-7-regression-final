@@ -48,9 +48,9 @@ function loadData() {
    * Loads in the model
    */
   const modelInfo = {
-    model: "./model/model.json",
-    metadata: "./model/model_meta.json",
-    weights: "./model/model.weights.bin",
+    model: "./class/model.json",
+    metadata: "./class/model_meta.json",
+    weights: "./class/model.weights.bin",
   };
 
   nn.load(modelInfo, () => console.log("Model loaded!"));

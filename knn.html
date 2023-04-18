@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/1.1.0/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script defer src="js/knn.js" type="module"></script>
+    <script defer src="js/knn-train.js" type="module"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ML5 Neural Network Regression</title>
+  </head>
+
+  <body>
+  <h1 class="center">K-Nearest Neighbor (KNN)</h1>
+  <p class="center"><strong>A usage example of the <a href="https://github.com/StefanieStoppel/d3ML" target="_blank" title="d3ML repository on GitHub">d3ML</a> javascript library.</strong></p>
+  <p class="center">Click on the grey area to create new circles and see how their color changes based on their neighbors.</p>
+  <div id="knn"></div>
+</body><body>
+  <div>
+    <h2>K-nearest-neighbour</h2>
+    <p>Bekijk index.js om te zien hoe je met KNN kan werken in javascript</p>
+    <h3>Opdracht</h3>
+    <ol>
+      <li>Train KNN met onderstaande tabel</li>
+      <li>Maak het invoerveld werkend</li>
+      <li>Toon of de ingevoerde data een kat of hond is</li>
+    </ol>
+  </div>
+
+  <div>
+    <h2>Cats and dogs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Length</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Ear</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>18</td>
+          <td>9.2</td>
+          <td>8.1</td>
+          <td>2</td>
+          <td>'cat'</td>
+        </tr>
+        <tr>
+          <td>20.1</td>
+          <td>17</td>
+          <td>15.5</td>
+          <td>5</td>
+          <td>'dog'</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>9.1</td>
+          <td>9</td>
+          <td>1.95</td>
+          <td>'cat'</td>
+        </tr>
+        <tr>
+          <td>23.5</td>
+          <td>20</td>
+          <td>20</td>
+          <td>6.2</td>
+          <td>'dog'</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>9.0</td>
+          <td>10</td>
+          <td>2.1</td>
+          <td>'cat'</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>16.7</td>
+          <td>16</td>
+          <td>3.3</td>
+          <td>'dog'</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h3>Classify new animal</h3>
+    <div>
+      <label
+        >Length
+        <input type="text" name="length" size="5" />
+      </label>
+      <label
+        >Height
+        <input type="text" name="height" size="5" />
+      </label>
+      <label
+        >Weight
+        <input type="text" name="weight" size="5" />
+      </label>
+      <label
+        >Ear
+        <input type="text" name="ear" size="5" />
+      </label>
+    </div>
+    <div>
+      <button id="classifybtn">Classify</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script defer src="src/index.js"></script>
+</body>
+</html>
